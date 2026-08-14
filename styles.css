@@ -20,9 +20,9 @@
   --cyber-blue: #38bdf8;
   --neon-pink: #c084fc;
   --shadow: 0 26px 80px rgba(2, 6, 23, 0.62);
-  --glow: 0 0 30px rgba(56, 189, 248, 0.22);
-  --glow-pink: 0 0 30px rgba(168, 85, 247, 0.2);
-  --glow-purple: 0 0 24px rgba(139, 92, 246, 0.18);
+  --glow: 0 0 20px rgba(56, 189, 248, 0.12);
+  --glow-pink: 0 0 16px rgba(168, 85, 247, 0.1);
+  --glow-purple: 0 0 14px rgba(139, 92, 246, 0.08);
 }
 
 * {
@@ -30,47 +30,32 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.12), transparent 18%),
-    radial-gradient(circle at 80% 10%, rgba(168, 85, 247, 0.1), transparent 24%),
-    radial-gradient(circle at 50% 100%, rgba(251, 191, 36, 0.08), transparent 30%),
-    linear-gradient(180deg, #090d16 0%, #0d1320 38%, #0b1220 100%);
+  background: linear-gradient(180deg, #090d16 0%, #0d1320 38%, #0b1220 100%);
   color: var(--text);
   line-height: 1.6;
   letter-spacing: -0.01em;
-  animation: bgPulse 30s ease-in-out infinite;
 }
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background:
-    linear-gradient(120deg, transparent 0%, rgba(0,255,255,0.03) 50%, transparent 100%),
-    repeating-linear-gradient(
-      0deg,
-      rgba(0, 255, 255, 0.01),
-      rgba(0, 255, 255, 0.01) 1px,
-      transparent 1px,
-      transparent 2px
-    );
+  background: linear-gradient(180deg, rgba(9, 13, 22, 0.4) 0%, transparent 50%, rgba(9, 13, 22, 0.4) 100%);
   pointer-events: none;
-  animation: sheen 10s linear infinite, scanlines 8s linear infinite;
 }
 
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 0, 107, 0.08), transparent 70%);
+  display: none;
   pointer-events: none;
-  animation: pulseGlow 6s ease-in-out infinite;
 }
 
 a {
@@ -2827,25 +2812,7 @@ textarea:focus {
   color: #f4a4a4;
 }
 
-@keyframes sheen {
-  0% { transform: translateX(-120%); }
-  100% { transform: translateX(120%); }
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-@keyframes scanlines {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 4px; }
-}
-
-@keyframes bgPulse {
-  0%, 100% { filter: brightness(1); }
-  50% { filter: brightness(1.05); }
-}
+/* Removed performance-heavy animations for speed */
 
 @keyframes pulseGlowIntense {
   0%, 100% { opacity: 0.6; }
@@ -2891,8 +2858,8 @@ textarea:focus {
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 rgba(143, 124, 255, 0.2); }
-  50% { box-shadow: 0 0 30px rgba(143, 124, 255, 0.3); }
+  0%, 100% { box-shadow: 0 0 0 rgba(143, 124, 255, 0.1); }
+  50% { box-shadow: 0 0 16px rgba(143, 124, 255, 0.15); }
 }
 
 .hero-visual img,

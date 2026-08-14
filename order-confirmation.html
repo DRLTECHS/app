@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order confirmation | DRL Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo" aria-label="DRL Solutions home">
+          <span class="logo-mark">D</span>
+          <span>DRL Solutions</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="confirmation-card">
+            <div class="confirmation-header">
+              <div class="confirmation-icon">✓</div>
+              <h1>Order Confirmed!</h1>
+              <p>Thank you for your purchase. Your gaming gear order has been received and is being prepared.</p>
+            </div>
+
+            <div class="confirmation-details">
+              <div class="detail-group">
+                <h3>Order number</h3>
+                <p id="orderNumber" class="order-id">ORD-2026-000001</p>
+              </div>
+
+              <div class="detail-group">
+                <h3>Order date</h3>
+                <p id="orderDate"></p>
+              </div>
+
+              <div class="detail-group">
+                <h3>Estimated delivery</h3>
+                <p>5-7 business days</p>
+              </div>
+
+              <div class="detail-group">
+                <h3>Order total</h3>
+                <p id="orderTotal" style="font-size: 1.3rem; font-weight: 700; color: var(--primary);"></p>
+              </div>
+            </div>
+
+            <div class="confirmation-section">
+              <h2>What's next?</h2>
+              <ol class="next-steps">
+                <li>
+                  <strong>Payment processing</strong>
+                  <p>SwiftPay is processing your payment. You'll receive a confirmation email shortly.</p>
+                </li>
+                <li>
+                  <strong>Order preparation</strong>
+                  <p>Our team is picking and preparing your gaming gear for shipment.</p>
+                </li>
+                <li>
+                  <strong>Shipment notification</strong>
+                  <p>You'll receive tracking information via email when your order ships.</p>
+                </li>
+                <li>
+                  <strong>Delivery</strong>
+                  <p>Your gaming gear will arrive at your address within the estimated timeframe.</p>
+                </li>
+              </ol>
+            </div>
+
+            <div class="confirmation-section">
+              <h2>Order details</h2>
+              <div id="orderItems" class="order-items-list">
+                <!-- Items will be populated here -->
+              </div>
+            </div>
+
+            <div class="confirmation-actions">
+              <a href="order-tracking.html" class="button button-primary">Track your order</a>
+              <a href="shop.html" class="button button-secondary">Continue shopping</a>
+            </div>
+
+            <div class="confirmation-notice">
+              <p>
+                A confirmation email has been sent to <strong id="confirmEmail"></strong>. 
+                If you don't see it, check your spam folder or contact our support team.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-mark">D</span>
+            <span>DRL Solutions</span>
+          </a>
+          <p>Premium gaming and betting platform software.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+          <a href="index.html">Home</a>
+        </div>
+
+        <p class="copyright">© <span id="year"></span> DRL Solutions. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="order-confirmation.js"></script>
+  </body>
+</html>

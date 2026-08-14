@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRL AI | Pricing, NDA & Contract Assistant</title>
+    <meta
+      name="description"
+      content="DRL AI helps clients estimate pricing, prepare NDA terms, and generate contract-ready project summaries for digital products and technology services."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="ai">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo" aria-label="DRL Techs home">
+          <img src="assets/logo.svg" alt="DRL Solutions logo" class="brand-logo" />
+          <span class="brand-text">DRL Solutions</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="shop.html">Shop</a>
+          <a href="ai.html" class="active-link">AI</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <a class="button button-primary" href="contact.html">Book a Call</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero ai-page-hero">
+        <div class="container page-hero-inner">
+          <div class="page-hero-copy">
+            <span class="page-badge">DRL AI</span>
+            <h1>Pricing, NDA, and contract support for every customer.</h1>
+            <p>
+              DRL AI helps clients estimate the cost of websites, apps, gaming platforms, and custom software while preparing a contract-ready summary and NDA flow tailored to their project.
+            </p>
+          </div>
+
+          <div class="page-panel">
+            <div class="ai-hero-box">
+              <span class="ai-badge">AI Assistant</span>
+              <p>Powered by DRL Techs to guide discovery, pricing, and customer onboarding.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">What DRL AI does</span>
+            <h2>Built for real client onboarding and project preparation.</h2>
+          </div>
+
+          <div class="value-grid ai-feature-grid">
+            <article class="info-card">
+              <h3>Pricing estimates</h3>
+              <p>Translates project scope into realistic pricing in Philippine pesos for websites, apps, platforms, and software builds.</p>
+            </article>
+
+            <article class="info-card">
+              <h3>NDA preparation</h3>
+              <p>Creates a non-disclosure agreement flow for each customer before sensitive business details are shared.</p>
+            </article>
+
+            <article class="info-card">
+              <h3>Contract summary</h3>
+              <p>Generates a client-ready overview covering scope, milestones, ownership, payment terms, and signatory approval.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt-bg">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Advanced onboarding flow</span>
+            <h2>The 4-step DRL AI intake process.</h2>
+          </div>
+
+          <div class="timeline ai-timeline">
+            <div class="timeline-item">
+              <span class="step">1</span>
+              <div>
+                <h3>Client discovery</h3>
+                <p>The customer shares their goal, project scope, and business needs through the AI and intake form.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="step">2</span>
+              <div>
+                <h3>NDA review</h3>
+                <p>DRL AI confirms confidentiality requirements and prepares the client-facing NDA flow before more detail is shared.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="step">3</span>
+              <div>
+                <h3>Pricing & proposal</h3>
+                <p>We estimate the project in PHP, define the timeline, and prepare the formal contract summary for approval.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="step">4</span>
+              <div>
+                <h3>Contract signing & delivery</h3>
+                <p>After legal review and signatory approval, the project moves into development, testing, and launch.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt-bg">
+        <div class="container ai-layout">
+          <div class="ai-contract-panel">
+            <span class="eyebrow">Project intake assistant</span>
+            <h2>Generate contract-ready information.</h2>
+
+            <form id="aiContractForm" class="ai-form" novalidate>
+              <div class="field-row">
+                <label>
+                  Client name
+                  <input type="text" name="clientName" placeholder="Enter customer name" required />
+                </label>
+                <label>
+                  Project type
+                  <select name="projectType" required>
+                    <option value="">Select project</option>
+                    <option>Website</option>
+                    <option>Web application</option>
+                    <option>Mobile app</option>
+                    <option>Business software</option>
+                    <option>Gaming platform</option>
+                    <option>Sabong betting platform</option>
+                    <option>Custom digital product</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="field-row">
+                <label>
+                  Budget estimate (PHP)
+                  <input type="number" name="budget" min="10000" step="1000" placeholder="25000" />
+                </label>
+                <label>
+                  Preferred timeline
+                  <select name="timeline">
+                    <option value="">Select timeline</option>
+                    <option>ASAP</option>
+                    <option>Within 1 month</option>
+                    <option>1-3 months</option>
+                    <option>3+ months</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Brief project description
+                <textarea name="projectDetails" rows="6" placeholder="Describe the idea, goals, target users, and required features..." required></textarea>
+              </label>
+
+              <div class="nda-box">
+                <strong>Non-Disclosure Agreement (NDA)</strong>
+                <p>DRL Techs Computer Software Trading, also known as DRL Solutions, will protect all business, technical, and strategic information disclosed by the client and use it only for project evaluation and development.</p>
+                <p><strong>Company signatory:</strong> Den Russell Leonardo, President.</p>
+              </div>
+
+              <label class="nda-checkbox">
+                <input type="checkbox" name="ndaAccepted" checked />
+                I agree to the NDA and contract preparation workflow.
+              </label>
+
+              <button type="submit" class="button button-primary button-full">Generate Contract Summary</button>
+              <p id="contractFormStatus" class="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div class="ai-result-panel">
+            <span class="eyebrow">Prepared draft</span>
+            <h3>Client agreement overview</h3>
+            <div id="contractDraftOutput" class="contract-output">
+              <p>Complete the form to generate a draft contract summary, pricing estimate, and NDA-ready structure.</p>
+            </div>
+
+            <div class="signature-panel">
+              <h4>Signature & approval</h4>
+              <div class="field-row">
+                <label>
+                  Client representative
+                  <input id="clientSignatureName" type="text" placeholder="Enter client representative" />
+                </label>
+                <label>
+                  Company signatory
+                  <input type="text" value="Den Russell Leonardo" readonly />
+                </label>
+              </div>
+
+              <div class="signature-actions">
+                <button type="button" id="saveContractBtn" class="button button-secondary">Save Contract</button>
+                <button type="button" id="printContractBtn" class="button button-primary">Print / Save as PDF</button>
+              </div>
+            </div>
+
+            <div class="dashboard-box">
+              <h4>Client pipeline</h4>
+              <ul id="clientPipeline" class="pipeline-list">
+                <li><span class="pipeline-dot pipeline-inquiry"></span> No clients yet</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-mark">D</span>
+            <span>DRL Techs</span>
+          </a>
+          <p>Turning digital ideas into real-life software solutions.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <p class="copyright">© <span id="year"></span> DRL Techs. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

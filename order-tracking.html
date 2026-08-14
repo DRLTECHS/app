@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track your order | DRL Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo" aria-label="DRL Solutions home">
+          <span class="logo-mark">D</span>
+          <span>DRL Solutions</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <div class="page-hero-copy">
+            <span class="page-badge">Order tracking</span>
+            <h1>Track your gaming gear shipment.</h1>
+            <p>Enter your order number to see the real-time status and estimated delivery date.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="tracking-search">
+            <form id="trackingForm" class="search-form" onsubmit="searchOrder(event)">
+              <div class="field-grid">
+                <label>
+                  Order number
+                  <input 
+                    type="text" 
+                    id="orderNumberInput" 
+                    name="orderNumber" 
+                    placeholder="e.g., ORD-2026-000001" 
+                    required 
+                  />
+                </label>
+                <label>
+                  Email address
+                  <input 
+                    type="email" 
+                    id="emailInput" 
+                    name="email" 
+                    placeholder="your@email.com" 
+                    required 
+                  />
+                </label>
+              </div>
+              <button type="submit" class="button button-primary">Track order</button>
+            </form>
+          </div>
+
+          <div id="trackingResult" style="display: none;">
+            <div class="tracking-card">
+              <div class="tracking-header">
+                <h2 id="trackingOrderNumber"></h2>
+                <span id="trackingStatus" class="status-badge"></span>
+              </div>
+
+              <div class="tracking-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-marker completed">
+                    <span>✓</span>
+                  </div>
+                  <div class="timeline-content">
+                    <h4>Order received</h4>
+                    <p id="dateReceived"></p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-marker" id="marker2">
+                    <span>2</span>
+                  </div>
+                  <div class="timeline-content">
+                    <h4>Payment confirmed</h4>
+                    <p id="datePayment"></p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-marker" id="marker3">
+                    <span>3</span>
+                  </div>
+                  <div class="timeline-content">
+                    <h4>Preparing shipment</h4>
+                    <p id="dateShipping" class="muted">Estimated 2-3 business days</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-marker" id="marker4">
+                    <span>4</span>
+                  </div>
+                  <div class="timeline-content">
+                    <h4>Out for delivery</h4>
+                    <p id="dateDelivery" class="muted">Tracking number to be provided</p>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-marker" id="marker5">
+                    <span>5</span>
+                  </div>
+                  <div class="timeline-content">
+                    <h4>Delivered</h4>
+                    <p id="dateDelivered" class="muted">Expected by <span id="estimatedDelivery"></span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tracking-details">
+                <div class="detail-box">
+                  <h3>Shipping address</h3>
+                  <p id="shippingAddress"></p>
+                </div>
+
+                <div class="detail-box">
+                  <h3>Shipping method</h3>
+                  <p id="shippingMethod"></p>
+                </div>
+
+                <div class="detail-box">
+                  <h3>Items in this order</h3>
+                  <div id="trackingItems" class="items-list"></div>
+                </div>
+              </div>
+
+              <div class="tracking-actions">
+                <button type="button" class="button button-secondary" onclick="startNewSearch()">
+                  Search another order
+                </button>
+                <a href="shop.html" class="button button-secondary">Continue shopping</a>
+              </div>
+            </div>
+          </div>
+
+          <div id="trackingError" class="error-message" style="display: none;">
+            <p>Order not found. Please check your order number and email address and try again.</p>
+            <button type="button" class="button button-secondary" onclick="resetTracking()">
+              Try again
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-mark">D</span>
+            <span>DRL Solutions</span>
+          </a>
+          <p>Premium gaming and betting platform software.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+          <a href="index.html">Home</a>
+        </div>
+
+        <p class="copyright">© <span id="year"></span> DRL Solutions. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="order-tracking.js"></script>
+  </body>
+</html>

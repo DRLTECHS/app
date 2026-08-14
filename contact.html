@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | DRL Techs</title>
+    <meta
+      name="description"
+      content="Contact DRL Techs Computer Software Trading in Pila, Laguna for custom software, gaming platforms, and website development services."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo" aria-label="DRL Techs home">
+          <img src="assets/logo.svg" alt="DRL Solutions logo" class="brand-logo" />
+          <span class="brand-text">DRL Solutions</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <a class="button button-primary" href="contact.html">Book a Call</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <div class="page-hero-copy">
+            <span class="page-badge">Contact us</span>
+            <h1>DRL TECHS. COMPUTER SOFTWARE TRADING</h1>
+            <p>
+              Also known as DRL Solutions, we help businesses and digital brands build software, platforms, websites, and gaming-ready experiences for real growth.
+            </p>
+          </div>
+
+          <div class="page-panel">
+            <ul class="contact-list">
+              <li>📍 542 Lopez Jaena St., Brgy. Bulilan Norte, Pila, Laguna, Philippines</li>
+              <li>📞 <a href="tel:+639556708019">09556708019</a></li>
+              <li>📩 <a href="mailto:hello@drltechs.com">hello@drltechs.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container contact-layout">
+          <div class="contact-card">
+            <span class="eyebrow">Business details</span>
+            <h2>Let’s connect and build your next digital solution.</h2>
+            <p>
+              Whether you need a custom system, online shop, or digital platform, our team is ready to support your vision.
+            </p>
+            <ul class="contact-list">
+              <li>📍 542 Lopez Jaena St., Brgy. Bulilan Norte</li>
+              <li>📍 Pila, Laguna, Philippines</li>
+              <li>📞 <a href="tel:+639556708019">09556708019</a></li>
+            </ul>
+          </div>
+
+          <form id="contactForm" class="contact-form page-form" novalidate>
+            <div class="field-grid">
+              <label>
+                Full name
+                <input type="text" name="name" placeholder="Your full name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="your@email.com" required />
+              </label>
+            </div>
+
+            <div class="field-grid">
+              <label>
+                Phone number
+                <input type="tel" name="phone" placeholder="Your phone number" />
+              </label>
+              <label>
+                Project type
+                <select name="projectType" required>
+                  <option value="">Select one</option>
+                  <option>Website</option>
+                  <option>Software</option>
+                  <option>Gaming platform</option>
+                  <option>Shop</option>
+                  <option>Custom project</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Tell us about your idea
+              <textarea
+                name="details"
+                rows="6"
+                placeholder="Describe the application, website, or digital product you want to create..."
+                required
+              ></textarea>
+            </label>
+
+            <div id="ndaPreview" class="nda-panel" aria-live="polite"></div>
+
+            <label class="nda-checkbox">
+              <input type="checkbox" name="ndaAccepted" id="ndaAgreement" checked />
+              I acknowledge and accept the Non-Disclosure Agreement for this project inquiry.
+            </label>
+
+            <button type="submit" class="button button-primary button-full">Send Inquiry</button>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-mark">D</span>
+            <span>DRL Techs</span>
+          </a>
+          <p>Turning digital ideas into real-life software solutions.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <p class="copyright">© <span id="year"></span> DRL Techs. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

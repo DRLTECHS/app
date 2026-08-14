@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | DRL Techs</title>
+    <meta
+      name="description"
+      content="Shop premium gaming devices and accessories from DRL Techs, featuring keyboards, headsets, gaming gear, and digital lifestyle products."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo" aria-label="DRL Techs home">
+          <img src="assets/logo.svg" alt="DRL Solutions logo" class="brand-logo" />
+          <span class="brand-text">DRL Solutions</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <a class="button button-primary" href="contact.html">Book a Call</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <div class="page-hero-copy">
+            <span class="page-badge">Gaming devices</span>
+            <h1>DRL Solutions gaming tech collection.</h1>
+            <p>
+              Explore the DRL Solutions collection of modern gaming devices, accessories, and digital lifestyle essentials curated for performance and style.
+            </p>
+          </div>
+
+          <div class="page-panel">
+            <img src="https://images.unsplash.com/photo-1599474968541-56ceb22213e9?w=600&h=400&fit=crop" alt="Premium gaming gear and equipment collection" style="border-radius: 1.25rem; box-shadow: 0 22px 55px rgba(61, 197, 244, 0.18); width: 100%;" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="shop-grid">
+            <article class="shop-card">
+              <div class="shop-visual shop-one"></div>
+              <div class="shop-info">
+                <h3>Pro Gaming Headset</h3>
+                <p>Immersive audio and crystal-clear voice for competitive play.</p>
+                <div class="shop-price">
+                  <strong>$89.00</strong>
+                  <button type="button" onclick="addToCart(1, 1)">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="shop-card">
+              <div class="shop-visual shop-two"></div>
+              <div class="shop-info">
+                <h3>RGB Mechanical Keyboard</h3>
+                <p>Premium tactile switches, macro controls, and vibrant design.</p>
+                <div class="shop-price">
+                  <strong>$119.00</strong>
+                  <button type="button" onclick="addToCart(2, 1)">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="shop-card">
+              <div class="shop-visual shop-three"></div>
+              <div class="shop-info">
+                <h3>4K Streaming Camera</h3>
+                <p>Sharp, reliable video quality for streaming and content creation.</p>
+                <div class="shop-price">
+                  <strong>$149.00</strong>
+                  <button type="button" onclick="addToCart(3, 1)">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="shop-card">
+              <div class="shop-visual shop-four"></div>
+              <div class="shop-info">
+                <h3>Ultra Gaming Mouse</h3>
+                <p>Low-latency precision built for competitive play and speed.</p>
+                <div class="shop-price">
+                  <strong>$79.00</strong>
+                  <button type="button" onclick="addToCart(4, 1)">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="shop-card">
+              <div class="shop-visual shop-five"></div>
+              <div class="shop-info">
+                <h3>Stream Deck Console</h3>
+                <p>For instant actions, shortcuts, and smooth creator workflows.</p>
+                <div class="shop-price">
+                  <strong>$129.00</strong>
+                  <button type="button" onclick="addToCart(5, 1)">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="shop-card">
+              <div class="shop-visual shop-six"></div>
+              <div class="shop-info">
+                <h3>Gaming USB Hub</h3>
+                <p>Connect your gear with clean power and improved setup management.</p>
+                <div class="shop-price">
+                  <strong>$59.00</strong>
+                  <button type="button" onclick="addToCart(6, 1)">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-mark">D</span>
+            <span>DRL Techs</span>
+          </a>
+          <p>Turning digital ideas into real-life software solutions.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <p class="copyright">© <span id="year"></span> DRL Techs. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

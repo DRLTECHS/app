@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | DRL Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo" aria-label="DRL Solutions home">
+          <span class="logo-mark">D</span>
+          <span>DRL Solutions</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <div class="page-hero-copy">
+            <span class="page-badge">Secure checkout</span>
+            <h1>Complete your gaming gear order.</h1>
+            <p>Enter your shipping and billing information to proceed with SwiftPay payment.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="checkout-progress">
+            <div class="progress-step active" id="step1">
+              <span>1</span>
+              <p>Shipping</p>
+            </div>
+            <div class="progress-step" id="step2">
+              <span>2</span>
+              <p>Payment</p>
+            </div>
+            <div class="progress-step" id="step3">
+              <span>3</span>
+              <p>Confirm</p>
+            </div>
+          </div>
+
+          <div class="checkout-form-section">
+            <form id="checkoutForm" class="checkout-form" novalidate>
+              <div id="shippingSection" class="form-section active">
+                <h2>Shipping information</h2>
+
+                <div class="field-grid">
+                  <label>
+                    Full name
+                    <input type="text" name="fullName" placeholder="Your full name" required />
+                  </label>
+                  <label>
+                    Email
+                    <input type="email" name="email" placeholder="your@email.com" required />
+                  </label>
+                </div>
+
+                <div class="field-grid">
+                  <label>
+                    Phone number
+                    <input type="tel" name="phone" placeholder="Your phone number" required />
+                  </label>
+                  <label>
+                    Country
+                    <select name="country" required>
+                      <option value="">Select country</option>
+                      <option>Philippines</option>
+                      <option>United States</option>
+                      <option>Canada</option>
+                      <option>United Kingdom</option>
+                      <option>Australia</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div class="field-grid">
+                  <label>
+                    Street address
+                    <input type="text" name="address" placeholder="123 Main St" required />
+                  </label>
+                  <label>
+                    City
+                    <input type="text" name="city" placeholder="Your city" required />
+                  </label>
+                </div>
+
+                <div class="field-grid">
+                  <label>
+                    State / Province
+                    <input type="text" name="state" placeholder="Your state" />
+                  </label>
+                  <label>
+                    Postal code
+                    <input type="text" name="postal" placeholder="Your postal code" required />
+                  </label>
+                </div>
+
+                <label>
+                  <input type="checkbox" name="billingSame" checked /> Billing address same as shipping
+                </label>
+
+                <button type="button" class="button button-primary" onclick="proceedToPayment()">
+                  Continue to payment
+                </button>
+              </div>
+
+              <div id="paymentSection" class="form-section" style="display: none;">
+                <h2>Payment method</h2>
+                <p style="margin-bottom: 1.5rem; color: var(--muted);">
+                  Choose how you'd like to pay. We accept all major cards and payment methods via SwiftPay.
+                </p>
+
+                <div class="payment-methods">
+                  <label class="payment-option">
+                    <input type="radio" name="paymentMethod" value="swiftpay-card" checked />
+                    <span class="method-label">
+                      <strong>Credit / Debit Card</strong>
+                      <small>Visa, Mastercard, AmEx</small>
+                    </span>
+                  </label>
+                  <label class="payment-option">
+                    <input type="radio" name="paymentMethod" value="swiftpay-wallet" />
+                    <span class="method-label">
+                      <strong>SwiftPay Wallet</strong>
+                      <small>Fast & secure digital wallet</small>
+                    </span>
+                  </label>
+                  <label class="payment-option">
+                    <input type="radio" name="paymentMethod" value="swiftpay-bancnet" />
+                    <span class="method-label">
+                      <strong>Local Bank Transfer (PH)</strong>
+                      <small>BancNet, InstaPay, PesoNet</small>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="button-group">
+                  <button type="button" class="button button-secondary" onclick="goBackToShipping()">
+                    Back to shipping
+                  </button>
+                  <button type="button" class="button button-primary" onclick="proceedToConfirm()">
+                    Review and confirm
+                  </button>
+                </div>
+              </div>
+
+              <div id="confirmSection" class="form-section" style="display: none;">
+                <h2>Review your order</h2>
+
+                <div class="order-review">
+                  <div class="review-block">
+                    <h3>Shipping to</h3>
+                    <p id="reviewShipping"></p>
+                  </div>
+
+                  <div class="review-block">
+                    <h3>Payment method</h3>
+                    <p id="reviewPayment"></p>
+                  </div>
+
+                  <div class="review-block">
+                    <h3>Order total</h3>
+                    <p id="reviewTotal" style="font-size: 1.4rem; font-weight: 700; color: var(--primary);"></p>
+                  </div>
+                </div>
+
+                <div class="checkout-notice" style="margin: 1.5rem 0;">
+                  <p>
+                    By clicking "Complete Payment", you agree to our terms and authorize SwiftPay to process the payment on your behalf.
+                  </p>
+                </div>
+
+                <div class="button-group">
+                  <button type="button" class="button button-secondary" onclick="goBackToPayment()">
+                    Back to payment
+                  </button>
+                  <button type="button" class="button button-primary" onclick="completePayment()">
+                    Complete payment with SwiftPay
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-mark">D</span>
+            <span>DRL Solutions</span>
+          </a>
+          <p>Premium gaming and betting platform software.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+          <a href="index.html">Home</a>
+        </div>
+
+        <p class="copyright">© <span id="year"></span> DRL Solutions. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="checkout.js"></script>
+  </body>
+</html>

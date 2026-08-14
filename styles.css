@@ -625,6 +625,104 @@ p {
 .hero-visual {
   display: flex;
   justify-content: center;
+  perspective: 1200px;
+}
+
+.hero-scene {
+  position: relative;
+  width: min(100%, 540px);
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.scene-card {
+  position: absolute;
+  border: 1px solid rgba(124, 211, 252, 0.28);
+  background: rgba(10, 20, 35, 0.72);
+  box-shadow: 0 30px 70px rgba(4, 12, 22, 0.7), 0 0 32px rgba(36, 164, 255, 0.2);
+  backdrop-filter: blur(18px);
+}
+
+.scene-main {
+  width: min(100%, 500px);
+  padding: 0.8rem;
+  border-radius: 1.8rem;
+  transform: rotateX(8deg) rotateY(-12deg) translateZ(18px);
+  overflow: hidden;
+}
+
+.scene-main img {
+  display: block;
+  width: 100%;
+  height: min(68vw, 460px);
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 60px rgba(31, 41, 55, 0.38);
+}
+
+.scene-side {
+  right: -0.5rem;
+  bottom: 1.2rem;
+  width: 180px;
+  padding: 1rem 1rem 0.9rem;
+  border-radius: 1.2rem;
+  transform: rotateX(8deg) rotateY(18deg) translateZ(54px);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(17, 24, 39, 0.75));
+}
+
+.mini-header {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pulse-dot {
+  display: inline-block;
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.9);
+}
+
+.scene-side strong {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  letter-spacing: -0.05em;
+}
+
+.scene-side small {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.scene-badge {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(10, 16, 32, 0.8);
+  border: 1px solid rgba(125, 211, 252, 0.24);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.25);
 }
 
 .dashboard-card {

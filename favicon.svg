@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="DRLTechs favicon">
+  <defs>
+    <linearGradient id="g1" x1="12" y1="12" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="0.45" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="24" y1="24" x2="96" y2="104" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="url(#g1)"/>
+  <path d="M34 34h28.5c17.67 0 31.5 13.83 31.5 31.5S80.17 97 62.5 97H34V34zm28.5 16H48v31h14.5c8.56 0 15.5-6.94 15.5-15.5S71.06 50 62.5 50z" fill="url(#g2)"/>
+  <path d="M82 28l20 14v11L82 39V28z" fill="#fbbf24"/>
+  <circle cx="86" cy="88" r="9" fill="#f8fafc"/>
+  <path d="M22 96c11-17 24-25 42-25" stroke="#dbeafe" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+</svg>
